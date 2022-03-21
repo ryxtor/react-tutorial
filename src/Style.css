@@ -1,0 +1,77 @@
+.todo-list {
+  display: flex;
+  justify-content: center;
+  min-width: 100vh;
+}
+
+.task-outer-container {
+  border: 3px solid #ecebea;
+  flex-basis: 70vw;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ecebea;
+}
+
+.tasks-container-title {
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+.task-form {
+  border: none;
+  font-size: 18px;
+  color: #b0afaf;
+  height: 100%;
+  width: 100%;
+  font-style: italic;
+  padding: 15px 0 15px 20px;
+}
+
+.task-inner-container {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ecebea;
+  border-bottom: 1px solid #ecebea;
+}
+
+.description {
+  margin: 0;
+  padding: 1rem;
+  flex-grow: 1;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+}
+
+.submit-btn {
+  background-color: #fff;
+  border: none;
+  border: 2px solid #000;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #797878;
+  color: #fff;
+}

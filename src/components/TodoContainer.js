@@ -1,38 +1,20 @@
-import React from 'react';
-import TodosList from './TodoList';
-import Header from './Header';
+import PropTypes from 'prop-types';
+import TodoItem from './TodoItem';
 
-class TodoContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: [
-        {
-          id: 1,
-          title: 'Setup development environment',
-          completed: true,
-        },
-        {
-          id: 2,
-          title: 'Develop website and add content',
-          completed: false,
-        },
-        {
-          id: 3,
-          title: 'Deploy to live server',
-          completed: false,
-        },
-      ],
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Header />
-        <TodosList todos={this.state.todos} />
-      </div>
-    );
-  }
+export default function TodoContainer({ tasks }) {
+  return (
+    <ul className="task-inner-container">
+      {
+        tasks.map(
+          (task) => (
+            <TodoItem key={task.id} id={task.id} description={task.description} />
+          ),
+        )
+      }
+    </ul>
+  );
 }
-export default TodoContainer;
+
+TodoContainer.propTypes = {
+  tasks: PropTypes.instanceOf(Array).isRequired,
+};

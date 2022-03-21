@@ -1,9 +1,7 @@
-import React from 'react';
-
 const Header = () => (
-  <header>
-    <h1>todos</h1>
-  </header>
+  <div className="title-container">
+    <h1 className="tasks-container-title">To Do List</h1>
+  </div>
 );
 
 export default Header;

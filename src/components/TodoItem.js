@@ -1,16 +1,15 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-class TodoItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <li>{this.props.todo.title}</li>
-    );
-  }
+export default function TodoItem(props) {
+  const { id, description } = props;
+  return (
+    <li id={id} className="task">
+      <p className="description">{description}</p>
+    </li>
+  );
 }
 
-export default TodoItem;
+TodoItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+};
