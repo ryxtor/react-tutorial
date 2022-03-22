@@ -12,7 +12,7 @@ function Input({ handleSubmit }) {
   return (
     <>
       <form onSubmit={(event) => hSubmit(event, description)} className="form-container">
-        <input onChange={({ target }) => setDescription(target.value)} value={description} type="text" name="taskForm" id="taskForm" className="task-form" placeholder="Add to your list..." />
+        <input onChange={({ target }) => setDescription(target.value)} value={description} type="text" name="taskForm" id="taskForm" className="task-form" placeholder="Add to your list..." required />
         <input className="submit-btn" type="submit" value="Submit" />
       </form>
     </>
